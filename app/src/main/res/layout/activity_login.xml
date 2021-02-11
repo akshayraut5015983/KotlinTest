@@ -22,10 +22,26 @@
         android:layout_height="wrap_content"
         android:padding="25dp"
         android:text="Login" />
+
     <Button
         android:id="@+id/btnReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="25dp"
         android:text="REg" />
+
+    <Button
+        android:id="@+id/btnVolly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:onClick="testVolly"
+        android:text="Volly" />
+
+    <Button
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:text="Volly Text Responce" />
 </LinearLayout>

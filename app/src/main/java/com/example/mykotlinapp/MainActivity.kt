@@ -1,5 +1,6 @@
 package com.example.mykotlinapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -12,6 +13,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 
 
@@ -50,8 +52,8 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "Home", Toast.LENGTH_LONG).show()
                 }
                 R.id.profile -> {
+                    startActivity(Intent(this, MapsActivity::class.java))
 
-                    Toast.makeText(this, "Profile", Toast.LENGTH_LONG).show()
                 }
                 R.id.logout -> {
                     Toast.makeText(this, "Offer", Toast.LENGTH_LONG).show()
@@ -64,14 +66,18 @@ class MainActivity : AppCompatActivity() {
 
 
         val recyclerView: RecyclerView = findViewById(R.id.recy)
-        moviesAdapter = MoviesAdapter(movieList,this)
+        moviesAdapter = MoviesAdapter(movieList, this)
         val layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.layoutManager = layoutManager
         // recyclerView.itemAnimator = DefaultItemAnimator()
         recyclerView.adapter = moviesAdapter
         prepareMovieData()
 
-
+        findViewById<FloatingActionButton>(R.id.flotBtn).setOnClickListener {
+            /*  val inten = Intent(this, AddDataRoom::class.java)
+              startActivity(intent)*/
+            startActivity(Intent(this, AddDataRoom::class.java))
+        }
         val ss: String = intent.getStringExtra("key").toString()
         Log.e("TAG", "onCreate: " + ss)
         Toast.makeText(this, ss, Toast.LENGTH_LONG)

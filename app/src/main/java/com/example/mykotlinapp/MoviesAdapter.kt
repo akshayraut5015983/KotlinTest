@@ -14,7 +14,7 @@ internal class MoviesAdapter(
     private var mainActivity: MainActivity
 ) :
     RecyclerView.Adapter<MoviesAdapter.MyViewHolder>() {
-
+// this is osnge line commet
     internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var title: TextView = view.findViewById(R.id.title)
         var year: TextView = view.findViewById(R.id.year)
@@ -36,7 +36,7 @@ internal class MoviesAdapter(
 
         holder.itemView.setOnClickListener {
             Log.e("TAG", "onBindViewHolder: " + movie.getTitle())
-            Toast.makeText(mainActivity, "name", Toast.LENGTH_LONG).show();
+            Toast.makeText(mainActivity, "name", Toast.LENGTH_LONG).show()
         }
     }
     override fun getItemCount(): Int {

@@ -29,10 +29,18 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recy"
-            android:layout_below="@+id/app"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/flotBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:src="@android:drawable/ic_input_add" />
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView

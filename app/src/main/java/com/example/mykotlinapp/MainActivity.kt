@@ -49,14 +49,14 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.home -> {
 
-                    Toast.makeText(this, "Home", Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this, TestAc::class.java))
                 }
                 R.id.profile -> {
                     startActivity(Intent(this, MapsActivity::class.java))
 
                 }
                 R.id.logout -> {
-                    Toast.makeText(this, "Offer", Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this, MainActivity2::class.java))
                 }
 
             }

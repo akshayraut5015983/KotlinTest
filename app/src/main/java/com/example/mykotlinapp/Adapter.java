@@ -62,7 +62,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.FruitHolder>{
                     if (list.get(j).isSelected())
                         data = data + "\n" + list.get(j).getName().toString() + "   " + list.get(j).getPrice().toString();
                 }
-                MainActivity2.listGet();
+
                 Toast.makeText(context, "Selected Fruits : \n " + data, Toast.LENGTH_SHORT).show();
             }
         });

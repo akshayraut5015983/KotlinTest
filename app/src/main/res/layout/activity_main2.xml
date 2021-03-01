@@ -15,11 +15,11 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnSub"
+        android:id="@+id/btnPAy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center_vertical"
-        android:text="er" />
+        android:text="PAyment" />
 
 </LinearLayout>
